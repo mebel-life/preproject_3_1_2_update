@@ -11,9 +11,8 @@ import ru.tananaev.preproject_3_1_2.entity.User;
 
 import java.util.List;
 
-@Repository
+
 @Component
-@Transactional
 public class UserDaoImp implements UserDao {
    @PersistenceContext
    EntityManager entityManager;
