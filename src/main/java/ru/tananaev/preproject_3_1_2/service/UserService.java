@@ -13,6 +13,6 @@ public interface UserService {
     List<User> listUsers();
     User getUser(int id);
     void updateUser(User user);
-    void removeUser(User user);
+    void removeUser(int id);
 
 }

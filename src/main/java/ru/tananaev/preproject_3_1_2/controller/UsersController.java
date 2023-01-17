@@ -12,7 +12,7 @@ import ru.tananaev.preproject_3_1_2.service.UserService;
 @RequestMapping("/users")
 public class UsersController {
     private final UserService userService;
-    @Autowired
+
     public UsersController(UserService userService) {
         this.userService = userService;
     }
@@ -36,7 +36,7 @@ public class UsersController {
     }
     @GetMapping("/delete/{id}")
     public String deleteUser(@PathVariable("id") int id) {
-        userService.removeUser(userService.getUser(id));
+        userService.removeUser(id);
         return "redirect:/users";
     }
     @GetMapping("/update/{id}")
